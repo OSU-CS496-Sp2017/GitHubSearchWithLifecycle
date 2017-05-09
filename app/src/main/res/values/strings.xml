@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GitHub Search</string>
+    <string name="loading_error_message">Woops.  We couldn\'t complete your search.  Check your internet connection and try again.</string>
+</resources>

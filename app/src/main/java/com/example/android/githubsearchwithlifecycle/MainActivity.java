@@ -27,6 +27,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity
         implements GitHubSearchAdapter.OnSearchResultClickListener, LoaderManager.LoaderCallbacks<String> {
 
+    private static final String TAG = MainActivity.class.getSimpleName();
     private static final String SEARCH_RESULTS_LIST_KEY = "searchResultsList";
     private static final String SEARCH_URL_KEY = "githubSearchURL";
 
@@ -83,7 +84,7 @@ public class MainActivity extends AppCompatActivity
 
     private void doGitHubSearch(String searchQuery) {
         String githubSearchUrl = GitHubUtils.buildGitHubSearchURL(searchQuery);
-        Log.d("MainActivity", "got search url: " + githubSearchUrl);
+        Log.d(TAG, "got search url: " + githubSearchUrl);
         new GitHubSearchTask().execute(githubSearchUrl);
     }
 
